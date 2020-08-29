@@ -1,0 +1,200 @@
+body{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 330px;
+}
+
+.header{
+    background: #202020;
+    color: #f5f5f5;
+    padding: 1.5em 0;
+}
+
+@media(max-width: 440px){
+    .header{
+        padding: 1.0em 0 0.5em 0;
+    }
+}
+
+.container__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2.0em;
+    flex-wrap: wrap;
+}
+
+.container__title > h1{
+    font-size: 36px;
+}
+
+.container__title a{
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+@media(max-width: 440px){
+    .container__title > h1{
+        margin: 0 0.5em;
+    }
+}
+
+/* Начало меню */
+
+.nav{
+    margin-left: 1.5em;
+}
+
+@media(max-width: 440px){
+    .nav{
+        margin: 0.5em 1.5em;
+    }
+    
+}
+
+.dropdown-label p{
+    font-size: 24px;
+}
+
+.dropdown{
+    display: inline-block;  /* Чтобы применялся блочный элементы и был во всю ширину своего родителя */
+    position: relative;     /* Если block, то во всю ширину экрана при width: 100% */
+}
+
+.dropdown-label{
+    padding: 0.5em 1.0em;
+    border: 1px solid #ffffff;
+    background: #2c2c2c;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.dropdown-label:hover{
+    color: #7cc975;
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute; /* Чтобы приложился, нормально к низу и отступов не было */
+    left: 0;
+    top: 2.8em;
+    min-width: 100%;
+    background: #ffbebe;
+}
+
+/* Через родителя к дочернему элименту */
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+    border-radius: 0.5em;
+}
+
+.submenu{
+    list-style: none;
+    border: 1px solid #ffffff;
+    border-radius: 0.5em;
+}
+
+/* reset border-li начало (style-none - первое и последнее)*/
+
+.submenu > .style-none-1{
+    border-top: none;
+    border-bottom: none;
+}
+
+.submenu > .style-none-2{
+    border-bottom: none;
+}
+
+.submenu > li{
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* reset border-li конец */
+
+.submenu > li > a{
+    display: block;
+    padding: 0.5em;
+    background: #2c2c2c;
+    color: #f5f5f5;
+    text-decoration: none;
+}
+
+.style-none-1 > a{
+    border-radius: 0.5em 0.5em 0 0;
+}
+
+.style-none-2 > a{
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.submenu > li > a:hover{
+    background: #3a3a3a;
+    color: #7cc975;
+}
+
+/* Конец меню */
+
+.article{
+    background: #3f3f3f;
+    color: #f5f5f5;
+}
+
+.container__article{
+    display: flex;
+    justify-content: center;
+}
+
+@media(min-width: 750px){
+    .container__article{
+        padding: 4.0em 15%;
+    }
+}
+
+@media(max-width: 750px){
+    .container__article{
+        padding: 2.0em 10%;
+    }
+}
+
+.information_article{
+    background-image: url(../../images/home/information-article.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1.0em;
+}
+
+.container__article h2{
+    color: #ffffff;
+    margin: 20%;
+}
+
+@media(max-width: 1000px){
+    .container__article h2{
+        font-size: calc(26px + 0.50vw);
+    }
+    .article{
+        line-height: 3.0em;
+    }
+}
+
+@media(min-width: 1000px){
+    .container__article h2{
+        font-size: calc(34px + 0.50vw);
+    }
+    .article{
+        line-height: 4.0em;
+    }
+}
+
+.footer{
+    background: #202020;
+    padding: 1.5em 0;
+    color: #f5f5f5;
+}
+
+.container__footer{
+    display: flex;
+    justify-content: center;
+}
